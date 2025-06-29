@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Superbe Page web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fb-login-container">
+        <div class="fb-login-box">
+            <h1 class="fb-title custom-title">Connexion</h1>
+            <form class="fb-form">
+                <input type="text" placeholder="Adresse e-mail ou numéro de téléphone" class="fb-input" required>
+                <input type="password" placeholder="Mot de passe" class="fb-input" required>
+                <button type="submit" class="fb-btn">Se connecter</button>
+                <a href="#" class="fb-link">Mot de passe oublié ?</a>
+            </form>
+            <hr class="fb-divider">
+            <button class="fb-create-btn">Créer nouveau compte</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.fb-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = form.querySelector('input[type="text"]').value;
+                const password = form.querySelector('input[type="password"]').value;
+                // Simulation d'une "connexion" sans backend
+                if(email && password) {
+                    // Ici, on simule une réussite
+                    alert('Connexion réussie ! Bienvenue, ' + email + '');
+                    // Redirection simulée (exemple)
+                    // window.location.href = 'accueil.html';
+                } else {
+                    alert('Veuillez remplir tous les champs.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
